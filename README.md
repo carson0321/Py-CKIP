@@ -1,7 +1,3 @@
-#Reference
-
-copy from [jason2506](https://github.com/jason2506/ckip.py)
-
 # CKIP.py
 
 **CKIP.py** is a simple interface for the services provided by [CKIP](http://ckip.iis.sinica.edu.tw/CKIP/index.htm).
@@ -139,3 +135,50 @@ for sentence in parsed_result['result']:
 Copyright (c) 2012-2014, Chi-En Wu.
 
 Distributed under [The BSD 3-Clause License](http://opensource.org/licenses/BSD-3-Clause).
+
+<h1>PyCCS (CKIP Chinese Segmentator)</h1>
+<p> A Python API for CKIP Chinese Segmentator
+
+<p>CKIP (Chinese Knowledge and Information Processing Group) provides a online Chinese segmentation tool (http://ckipsvr.iis.sinica.edu.tw/).<br>
+</p>
+
+<hr>
+<h2>Usage</h2>
+```
+>>> from PyCCS import ckip
+>>> result = ckip.seg('台灣大學語言學研究所')
+>>> print result.text()
+台灣/Nc 大學/Nc 語言學/Na 研究所/Nc 
+>>> result.raw
+[(u'\u53f0\u7063', u'Nc'),
+ (u'\u5927\u5b78', u'Nc'),
+ (u'\u8a9e\u8a00\u5b78', u'Na'),
+ (u'\u7814\u7a76\u6240', u'Nc')]
+```
+All html-like tags will be segmentated normally.<br>
+(At <a href="http://sunlight.iis.sinica.edu.tw/uwextract/demo.htm">CKIP Online Demo</a>, if you input strings containing html-like tag, the results might be weird)
+```
+>>> print ckip.seg('<h1>這是html tag</h1>').text()
+<h1>/FW 這/Nep 是/SHI html/FW tag</h1>/FW 
+```
+<h2>Limitations</h2>
+<strong>Input encoding should can only be CP950/BIG5</strong><br>
+For example, words containing "堃" or "瑠" cannot be segmentated.
+
+<h1>PyCCP (CKIP Chinese Parser)</h1>
+<p>A Python API for CKIP Chinese Parser</p>
+
+<p>CKIP Chinese Parser: http://parser.iis.sinica.edu.tw/</p>
+
+
+<h2>Usage</h2>
+from PyCCP import parseTree<br>
+res = parseTree('蟹老闆好帥氣。')
+
+#Reference
+
+CKIP.py copied from [jason2506](https://github.com/jason2506/ckip.py)
+
+PyCCS copied from [amigcamel](https://github.com/amigcamel/PyCCS)
+
+PyCCP copied from [amigcamel](https://github.com/amigcamel/PyCCP)
