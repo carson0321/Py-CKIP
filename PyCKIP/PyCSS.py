@@ -1,4 +1,12 @@
-#-*-coding:utf-8-*-
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+#########################################################################
+# File Name: PyCSS.py
+# Author: Carson Wang
+# mail: kiki86151@hotmail.com
+# Created Time: 2017-03-04 21:49:46
+#########################################################################
+
 import urllib, urllib2, re
 
 def seg(text):
@@ -129,3 +137,4 @@ class Segres(object):
         else:
             raise ValueError('Mode name error: %s' % mode)
         return output
+

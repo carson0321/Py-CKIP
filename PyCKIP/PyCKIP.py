@@ -1,12 +1,11 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
-
-#################################################
-# ckip.py
-# ckip.py
-#
-# Copyright (c) 2012-2014, Chi-En Wu
-# Distributed under The BSD 3-Clause License
-#################################################
+#########################################################################
+# File Name: PyCKIP.py
+# Author: Carson Wang
+# mail: kiki86151@hotmail.com
+# Created Time: 2017-03-04 21:45:07
+#########################################################################
 
 from __future__ import unicode_literals
 
@@ -179,3 +178,4 @@ class CKIPParser(CKIPClient):
         }
 
         return result
+
