@@ -1,4 +1,4 @@
-# py-CKIP
+# Py-CKIP
 
 Py-CKIP is a python API for CKIP Chinese Parser and Chinese Segmentator. The parser analyses the internal structure of Chinese words using [CKIP services](http://ckip.iis.sinica.edu.tw/CKIP/index.htm). CKIP(Chinese Knowledge and Information Processing Group) was invented by Taiwan Academia Sinica. In general, we can call through web services or crawl their websites to use. I found many implementations on the Internet, so I referred to the internet for implementations. There are two usages to provide. Please read the following instructions carefully.
 
