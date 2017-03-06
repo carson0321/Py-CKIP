@@ -8,4 +8,4 @@
 # -*- coding: utf-8 -*-
 
 
-__all__ = ['PyCKIP', 'PyCCP', 'PyCSS']
+__all__ = ['PyCKIP', 'PyCCP', 'PyCCS']

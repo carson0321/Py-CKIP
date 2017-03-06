@@ -161,8 +161,8 @@ for sentence in parsed_result['result']:
 ###PyCCS:
 
 ```python
->>> from PyCCS import ckip
->>> result = ckip.seg('台灣大學語言學研究所')
+>>> from PyCCS import seg
+>>> result = seg('台灣大學語言學研究所')
 >>> print result.text()
 台灣/Nc 大學/Nc 語言學/Na 研究所/Nc 
 >>> result.raw
@@ -176,7 +176,7 @@ All html-like tags will be segmentated normally. At [CKIP Online Demo](http://su
 
 For example:
 ```python
->>> print ckip.seg('<h1>這是html tag</h1>').text()
+>>> print seg('<h1>這是html tag</h1>').text()
 <h1>/FW 這/Nep 是/SHI html/FW tag</h1>/FW 
 ```
 
@@ -186,8 +186,10 @@ Input encoding should can only be **CP950/BIG5**. If words contains "堃" or "�
 ###PyCCP:
 
 ```python
-from PyCCP import parseTree<br>
-res = parseTree('蟹老闆好帥氣。')
+>>> from PyCCP import parseTree
+>>> res = parseTree('蟹老闆好帥氣。')
+>>> print res[0].encode('utf-8').decode('utf8')
+1.[0] S(theme:NP(property:Nab:蟹|Head:Nab:老闆)|degree:Dfa:好|Head:VH11:帥氣)#。(PERIODCATEGORY)
 ```
 
 License
